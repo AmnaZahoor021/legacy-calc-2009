@@ -1,0 +1,47 @@
+\doxysection{Loan.\+h}
+\hypertarget{_loan_8h_source}{}\label{_loan_8h_source}\index{src/Loan.h@{src/Loan.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LOAN\_H\ }}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LOAN\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_loan}{Loan}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ loan\_amount;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ interest\_rate;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ number\_of\_years;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ defaultLoan;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ defaultRate;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ defaultYears;}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_loan}{Loan}}(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ loan,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ rate,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ years);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ calculateMonthlyPayment();\ \textcolor{comment}{//\ add\ this\ function}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{string}\ input;\ \textcolor{comment}{//\ temporary\ string\ input}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ Helper\ to\ safely\ convert\ string\ to\ long\ double}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ strToLongDouble(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ str,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\&\ value);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_loan}{Loan}}();\ \textcolor{comment}{//\ constructor\ reads\ config.txt}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ readLoanAmount();}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ readInterestRate();}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ readNumberOfYears();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ calculateTotalAmount()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ calculateMonthlyAmount(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ total)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ getLoanAmount()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ loan\_amount;\ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ getInterestRate()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ interest\_rate;\ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ getYears()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ number\_of\_years;\ \}}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
