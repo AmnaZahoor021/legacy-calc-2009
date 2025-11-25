@@ -11,21 +11,20 @@ The objectives are:
 
     #HOW TO BUILD IT:
         Open gist link, copy code into src/main.cpp and run in terminal using:
-            g++ -std=c++11 src/main.cpp -o calc
+            g++ -std=c++11 src/main.cpp src/Loan.cpp -o calc
 
     #HOW TO RUN IT:
-        ./calc -cp -a 100000 -i 12 -n 360
-    OPTIONS:
-        -a: Loan amount
-        -i: Interest rate
-        -n: Number of payments
-        -cp: calculate the monthly payment
+        ./calc
+        
     #NEW FILES ADDED:
         * Loan.h
         * Loan.cpp
         * config.txt
         * test/test_emi.cpp (the unit tests)
 
+    #HOW TO RUN TESTS:
+                g++ -std=c++11 src/Loan.cpp test/test_emi.cpp -o test_emi
+                ./test_emi
 
 A simple loan calculator written in C++ using a Qt GUI.
 
