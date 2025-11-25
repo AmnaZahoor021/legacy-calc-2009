@@ -13,6 +13,10 @@ private:
     long double defaultLoan;
     long double defaultRate;
     long double defaultYears;
+public:
+            Loan(long double loan, long double rate, long double years);
+            long double calculateMonthlyPayment(); // add this function
+
 
     string input; // temporary string input
 
