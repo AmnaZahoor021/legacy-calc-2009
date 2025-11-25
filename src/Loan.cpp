@@ -1,6 +1,7 @@
 #include "Loan.h"
 #include <iostream>
 #include <fstream>
+#include<cmath>
 #include <cstdlib>
 using namespace std;
 
@@ -85,12 +86,24 @@ void Loan::readNumberOfYears() {
     }
 }
 
-// Calculate total amount to pay
 long double Loan::calculateTotalAmount() const {
-    return (loan_amount * number_of_years) + (loan_amount * number_of_years * (interest_rate / 100.0));
+    long double interest = loan_amount * (interest_rate / 100.0L) * number_of_years;
+    return loan_amount + interest;
 }
 
 // Calculate monthly payment
 long double Loan::calculateMonthlyAmount(long double total) const {
     return total / (number_of_years * 12);
+}
+
+// Constructor with parameters
+Loan::Loan(long double loan, long double rate, long double years) {
+    loan_amount = loan;
+    interest_rate = rate;
+    number_of_years = years;
+}
+
+long double Loan::calculateMonthlyPayment() {
+    long double total = calculateTotalAmount();
+    return calculateMonthlyAmount(total);
 }
